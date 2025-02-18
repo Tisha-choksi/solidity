@@ -164,3 +164,54 @@ idosale.withdrawUnsoldTokens();
 
 ## License
 This project is licensed under the MIT License.
+
+
+
+# LGBTQ+ User Registration & Login Frontend
+
+This project is a **simple frontend interface** for user registration and login processes, built with **HTML, CSS, and JavaScript**.
+
+## 📌 **Features:**
+- User Registration Form (Username, Email, Password)
+- User Login Form (Username, Password)
+- Real-time alerts for user actions (registration and login)
+
+## 🛠️ **Technologies Used:**
+- HTML5
+- CSS3 (Inline styles)
+- JavaScript (Vanilla JS)
+
+## 🚀 **How to Use:**
+1. **Save the File:** Save the provided HTML code as `index.html`.
+2. **Open the File:** Double-click `index.html` to open it in your browser.
+3. **Register a User:** Fill in the registration form and click **Register**.
+4. **Log in:** Enter your username and password and click **Login**.
+
+## ⚙️ **Integration with Django Backend:**
+To connect this frontend with your **Django backend APIs**, modify the `registerUser()` and `loginUser()` JavaScript functions to use `fetch()` for API calls.
+
+### Example:
+```javascript
+async function registerUser() {
+    const response = await fetch('http://127.0.0.1:8000/api/auth/register/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            username: document.getElementById('regUsername').value,
+            email: document.getElementById('regEmail').value,
+            password: document.getElementById('regPassword').value,
+        }),
+    });
+    const data = await response.json();
+    alert(data.message || 'User registered successfully!');
+}
+```
+
+## 💡 **Next Steps:**
+- Connect the form with your Django REST Framework (DRF) endpoints.
+- Add **form validation** for better user experience.
+- Implement **session management** for logged-in users.
+
+## 📞 **Need Help?**
+Feel free to reach out for assistance integrating this frontend with your **Django backend APIs**. 😊🚀
+
