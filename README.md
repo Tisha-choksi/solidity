@@ -219,6 +219,3 @@ it("Should add liquidity correctly", async function () {
 - Add **fee mechanism** for liquidity providers.
 - Implement **governance controls** for upgrades.
 - Integrate with **front-end DApp** for easy user interaction.
-
-## 📞 **Need Help?**
-Feel free to reach out for guidance on integrating this contract with a front-end interface or optimizing it for gas efficiency. 😊🚀
